@@ -20,7 +20,7 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive && apt-get install -y make 
  && echo "exec /sbin/setuser redis /usr/bin/redis-server /etc/redis/redis.conf" >> /etc/service/redis/run \
  && chmod +x /etc/service/redis \
  && apt-get autoremove -y gcc make libc6-dev && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
- && cd && rm -rf redis-3.0.5.tar.gz && rm -rf redis-3.0.5
+ && rm -rf /redis-3.0.5.tar.gz && rm -rf /redis-3.0.5
 
 EXPOSE 6379/tcp
 
